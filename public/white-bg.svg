@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <!-- Crisp white base gradient -->
+  <rect width="1440" height="900" fill="#FFFFFF"/>
+  <rect width="1440" height="900" fill="url(#subtle-mesh)"/>
+  
+  <!-- Subtle Singapore Modern Architectural Perspective Lines & Shapes -->
+  <g opacity="0.04" stroke="#0F172A" stroke-width="1.2">
+    <!-- Grid Perspective -->
+    <line x1="0" y1="180" x2="1440" y2="180" stroke-dasharray="4 8"/>
+    <line x1="0" y1="360" x2="1440" y2="360" stroke-dasharray="4 8"/>
+    <line x1="0" y1="540" x2="1440" y2="540" stroke-dasharray="4 8"/>
+    <line x1="0" y1="720" x2="1440" y2="720" stroke-dasharray="4 8"/>
+
+    <line x1="240" y1="0" x2="240" y2="900" stroke-dasharray="4 8"/>
+    <line x1="480" y1="0" x2="480" y2="900" stroke-dasharray="4 8"/>
+    <line x1="720" y1="0" x2="720" y2="900" stroke-dasharray="4 8"/>
+    <line x1="960" y1="0" x2="960" y2="900" stroke-dasharray="4 8"/>
+    <line x1="1200" y1="0" x2="1200" y2="900" stroke-dasharray="4 8"/>
+
+    <!-- Subtle Isometric Housing Skyline Silhouette Polyline -->
+    <path d="M-100 850 L120 740 L180 740 L260 620 L340 620 L380 690 L480 580 L560 580 L620 670 L760 510 L840 510 L920 630 L1040 460 L1140 460 L1240 600 L1360 420 L1460 420 L1560 850" fill="none" stroke="#059669" stroke-width="1.5" opacity="0.12"/>
+    <path d="M50 870 L200 780 L350 780 L500 680 L650 680 L800 730 L950 610 L1100 610 L1250 720 L1400 580 L1550 580" fill="none" stroke="#0284C7" stroke-width="1" opacity="0.08"/>
+  </g>
+
+  <!-- Delicate Dot Matrix Array -->
+  <pattern id="dot-grid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+    <circle cx="18" cy="18" r="1" fill="#64748B" opacity="0.1"/>
+  </pattern>
+  <rect width="1440" height="900" fill="url(#dot-grid)"/>
+
+  <!-- Radial Soft Glows -->
+  <defs>
+    <radialGradient id="subtle-mesh" cx="50%" cy="20%" r="70%" fx="50%" fy="20%">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#F1F5F9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="emerald-accent-fade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#065F46" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="200" cy="150" r="350" fill="url(#emerald-accent-fade)"/>
+  <circle cx="1250" cy="300" r="400" fill="url(#emerald-accent-fade)"/>
+</svg>
