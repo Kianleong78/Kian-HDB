@@ -2,6 +2,7 @@ export type NavigationTab =
   | 'home'
   | 'search'
   | 'analysis'
+  | 'methodology'
   | 'community-discussions'
   | 'trends'
   | 'compare'
@@ -11,6 +12,8 @@ export type NavigationTab =
   | 'ask-ai'
   | 'pricing'
   | 'final-report';
+
+export type UserPersona = 'first-timer' | 'seller' | 'agent' | 'investor';
 
 export type AmenityCategory =
   | 'mrt'
@@ -79,6 +82,8 @@ export interface HDBProperty {
   streetName: string;
   town: string;
   postalCode: string;
+  lat?: number;
+  lng?: number;
   flatType: '2-Room' | '3-Room' | '4-Room' | '5-Room' | 'Executive' | 'Multi-Gen';
   model: string; // Model A, Improved, Premium Apartment, DBSS, Maisonette, Standard
   sqm: number;
@@ -234,4 +239,3 @@ declare global {
     };
   }
 }
-

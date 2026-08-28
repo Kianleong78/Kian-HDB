@@ -14,9 +14,11 @@ import { AgentProView } from './views/AgentProView';
 import { AskAIView } from './views/AskAIView';
 import { PricingView } from './views/PricingView';
 import { FinalAIReportView } from './views/FinalAIReportView';
+import { ValuationMethodologyView } from './views/ValuationMethodologyView';
 import { DisqusCommunityView } from './views/DisqusCommunityView';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
-export default function App() {
+function AppContent() {
   const [activeTab, setActiveTab] = useState<NavigationTab>('home');
   const [properties] = useState<HDBProperty[]>(INITIAL_HDB_PROPERTIES);
   const [selectedProperty, setSelectedProperty] = useState<HDBProperty>(INITIAL_HDB_PROPERTIES[0]);
@@ -52,7 +54,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 transition-colors duration-200">
       {/* Top Navigation */}
       <Navbar
         activeTab={activeTab}
@@ -90,6 +92,14 @@ export default function App() {
           <PropertyAnalysisView
             property={selectedProperty}
             setActiveTab={setActiveTab}
+          />
+        )}
+
+        {activeTab === 'methodology' && (
+          <ValuationMethodologyView
+            selectedProperty={selectedProperty}
+            onExploreProperty={() => setActiveTab('analysis')}
+            onRunSearch={() => setActiveTab('search')}
           />
         )}
 
@@ -167,5 +177,13 @@ export default function App() {
       {/* Footer */}
       <Footer setActiveTab={setActiveTab} />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }

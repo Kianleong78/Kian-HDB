@@ -43,6 +43,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </button>
               </li>
               <li>
+                <button id="footer-link-methodology" onClick={() => setActiveTab('methodology')} className="hover:text-emerald-400 transition-colors font-bold text-emerald-500">
+                  How AI Valuation is Computed
+                </button>
+              </li>
+              <li>
                 <button id="footer-link-disqus-forum" onClick={() => setActiveTab('community-discussions')} className="hover:text-emerald-400 transition-colors">
                   Disqus Community Forum
                 </button>
