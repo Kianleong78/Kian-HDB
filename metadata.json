@@ -1,0 +1,6 @@
+{
+  "name": "HDB Insight AI",
+  "description": "Singapore HDB Resale Analysis & AI Property Decision Engine. Turn HDB data into smarter property decisions in seconds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

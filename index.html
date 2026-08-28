@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HDB Insight AI - Singapore HDB Resale & AI Valuation Platform</title>
+    <meta name="description" content="Singapore HDB Resale Analysis & AI Property Decision Engine. Turn HDB data into smarter property decisions in seconds." />
+    <meta property="og:title" content="HDB Insight AI" />
+    <meta property="og:description" content="Singapore HDB Resale Analysis & AI Property Decision Engine." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Global Safe Script Error Guard for Cross-Origin Third-Party Embeds -->
+    <script>
+      (function() {
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+          if (!msg || msg === 'Script error.' || msg === 'Script error' || !url || url.indexOf(window.location.origin) === -1) {
+            return true;
+          }
+          return false;
+        };
+
+        var handleGlobalError = function(e) {
+          if (!e) return;
+          var msg = (e.message || (e.error && e.error.message) || '').toLowerCase();
+          var src = (e.filename || (e.target && e.target.src) || '').toLowerCase();
+          if (
+            msg.indexOf('script error') !== -1 ||
+            msg.indexOf('disqus') !== -1 ||
+            msg.indexOf('resizeobserver') !== -1 ||
+            src.indexOf('disqus') !== -1 ||
+            src.indexOf('embed.js') !== -1
+          ) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            return true;
+          }
+        };
+
+        window.addEventListener('error', handleGlobalError, true);
+        window.addEventListener('unhandledrejection', function(e) {
+          if (e) {
+            var reason = e.reason ? (e.reason.message || String(e.reason)) : '';
+            if (typeof reason === 'string' && (reason.indexOf('Script error') !== -1 || reason.indexOf('disqus') !== -1)) {
+              e.preventDefault();
+              if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            }
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
